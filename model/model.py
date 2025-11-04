@@ -17,10 +17,15 @@ class Model:
 
     # --- ARTEFATTI ---
     def get_artefatti_filtrati(self, museo:str, epoca:str):
-        artefatti = self._artefatto_dao.get_artefatti(museo, epoca)
+        artefatti = self._artefatto_dao.get_artefatti()
+        artefatti_filtrati = []
+        for artefatto in artefatti:
+            if artefatto.id_museo == museo and artefatto.epoca == epoca:
+                artefatti_filtrati.append(artefatto)
+
+        return artefatti_filtrati
 
 
-        return artefatti
         """Restituisce la lista di tutti gli artefatti filtrati per museo e/o epoca (filtri opzionali)."""
         # TODO
 

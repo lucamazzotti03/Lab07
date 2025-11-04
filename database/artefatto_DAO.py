@@ -9,7 +9,7 @@ from model.artefattoDTO import Artefatto
 class ArtefattoDAO:
     def __init__(self):
         pass
-    def get_artefatti(self, museo, epoca):
+    def get_artefatti(self):
         print("Executing read from database using sql query")
         results = []
         cnx = ConnessioneDB.get_connection()
