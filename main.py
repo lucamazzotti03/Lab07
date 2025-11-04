@@ -6,11 +6,12 @@ from UI.controller import Controller
 
 
 def main(page: ft.Page):
+    print("Main avviato")
     my_model = Model()
     my_view = View(page)
     my_controller = Controller(my_view, my_model)
     my_view.set_controller(my_controller)
     my_view.load_interface()
-
+    print("eseguito tutto nel main")
 
 ft.app(target=main)
