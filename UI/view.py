@@ -52,7 +52,7 @@ class View:
         # TODO
         bottone_ricerca_artefatti = ft.ElevatedButton(text = "Cerca Artefatti", on_click=lambda e: self.controller.mostra_artefatti())
         self._list_view_artefatti = ft.ListView(expand = True, spacing = 10, padding = 20, auto_scroll=True)
-        self._list_view_artefatti.controls.append(ft.Text("→ Lista pronta per mostrare artefatti ←"))
+        self._list_view_artefatti.controls.append(ft.Text("Lista pronta per mostrare artefatti"))
 
         # --- Toggle Tema ---
         self.toggle_cambia_tema = ft.Switch(label="Tema scuro", value=True, on_change=self.cambia_tema)

@@ -23,10 +23,9 @@ class MuseoDAO:
             query = """SELECT * FROM museo"""
             cursor.execute(query)
             for row in cursor:
-                print(row)
                 museo = Museo(row["id"], row["nome"], row["tipologia"])
                 results.append(museo)
-            print(results)
+            #print(results)
             cursor.close()
             cnx.close()
             return results
@@ -45,7 +44,7 @@ class MuseoDAO:
             cursor.execute(query)
             for row in cursor:
                 results.append(row["epoca"])
-            print(results)
+            #print(results)
             cursor.close()
             cnx.close()
             return results

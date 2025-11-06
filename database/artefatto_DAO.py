@@ -10,7 +10,7 @@ class ArtefattoDAO:
     def __init__(self):
         pass
     def get_artefatti(self):
-        print("Executing read from database using sql query")
+        #print("Executing read from database using sql query")
         results = []
         cnx = ConnessioneDB.get_connection()
         if cnx is None:
@@ -25,7 +25,7 @@ class ArtefattoDAO:
                 artefatto = Artefatto(row["id"], row["nome"], row["tipologia"], row["epoca"], row["id_museo"])
 
                 results.append(artefatto)
-            print(results)
+            #print(results)
             cursor.close()
             cnx.close()
             return results
