@@ -55,8 +55,6 @@ class Controller:
         if len(artefatti_filtrati) == 0:
             self._view._list_view_artefatti.controls.append(ft.Text("Nessun Artefatto trovato, riprova"))
 
-
-
         self._view.page.update()
 
 
